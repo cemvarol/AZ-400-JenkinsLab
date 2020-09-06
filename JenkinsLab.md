@@ -81,7 +81,7 @@ chmod +x ContainerVm.bash
 
 3.  Run the command below to start Jenkins from port 8888
 
-**docker run -d -p 8888:8080 \--name Jens jenkins/jenkins**
+**docker run -d -p 8888:8080 \--name Jens jenkins/jenkins:latest**
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.2-DLJenkins.png)
 
