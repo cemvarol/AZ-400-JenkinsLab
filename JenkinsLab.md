@@ -16,7 +16,24 @@ chmod +x ContainerVm.bash
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
 
-3.  After the VM is created, connect to the VM via RDP, and use run [this script](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/1-DockerDT.ps1)on VM's powershell console This will install docker Desktop to that VM, *please restart when prompted*.
+3.  After the VM is created, connect to the VM via RDP, and use run this script on VM's powershell console This will install docker Desktop to that VM, *please restart when prompted*.
+    
+    
+    ```powershell
+    Set-NetFirewallProfile -Enabled False
+
+    cd\
+    mkdir SC
+
+    $url = "https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/DL-DocDT.ps1"
+    $output = "C:\SC\DockerDL.ps1"
+    Invoke-WebRequest -Uri $url -OutFile $output
+
+    Start-Sleep -s 5
+
+    Start-Process Powershell.exe -Argumentlist "-file C:\SC\DockerDL.ps1"
+
+    ```
     
 4.  Sign in again to that VM to follow the steps down below
 
