@@ -271,13 +271,12 @@ d.  Record this value, you will use this value as your **Jenkins Base URL**
 
 12. Now we set up a connection to Jenkins from Azure Devops. Any change on the code should trigger a new build on Jenkins.
     
-13. Try making a commit to the code - src/main/webapp/index.jsp would be a good candidate. This should trigger the build on Jenkins. You can confirm it by checking the history tab of the Jenkins services hook.
+13. Try making a commit to the code **- src/main/webapp/index.jsp** would be a good candidate. This should trigger the build on Jenkins. You can confirm it by checking the history tab of the Jenkins services hook.
     
-14. Go to Jenkins page and navigate to MS-Jen and check your builds.
+14. Go to Jenkins page and navigate to **MS-Jen** and check your builds.
 
-15. 3 builds are listed. First one was the initial build, second is triggered when hook was created, third one is created after the
-    step 13.
-
+15. Builds are listed. (Your number of builds may vary, depending on this labs creatin process)
+    
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/24-BuildHist.png)
 
 
