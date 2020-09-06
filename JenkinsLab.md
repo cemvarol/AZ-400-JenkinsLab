@@ -33,14 +33,14 @@ Select **Virtual machines** and, on the **Virtual machines** blade,
 -   User Name: **QA**
 -   Password: **1q2w3e4r5t6y\***
 
-> **Important Note:** All the actions you will follow including this step
+    > **Important Note:** All the actions you will follow including this step
     will be done on this Remote Computer's Console.
 
 1.  Within the Remote Desktop session run the following command in
     **PowerShell** to create the guest vm to protect.  
 
 
->**Note:** This will install docker Desktop to that VM, *please restart when prompted*.
+    >**Note:** This will install docker Desktop to that VM, *please restart when prompted*.
     
     
     ```powershell
