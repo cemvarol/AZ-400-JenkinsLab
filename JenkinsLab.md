@@ -21,23 +21,22 @@ chmod +x ContainerVm.bash
 #### Task 1: Set up VM To provide Containers Service
 
 Select **Virtual machines** and, on the **Virtual machines** blade,
-    select **Prot-VM01**.
+    select **Containers**.
 
-2.  Select **Networking**.
+1.  Select **Networking**.
 
-3.  Select **Connect**, in the drop-down menu, select **RDP**, and then
+1.  Select **Connect**, in the drop-down menu, select **RDP**, and then
     click **Download RDP File**.
 
-4.  When prompted, sign in with the following credentials:
+1.  When prompted, sign in with the following credentials:
 
 -   User Name: **QA**
-
 -   Password: **1q2w3e4r5t6y\***
 
 > **Important Note:** All the actions you will follow including this step
     will be done on this Remote Computer's Console.
 
-5.  Within the Remote Desktop session run the following command in
+1.  Within the Remote Desktop session run the following command in
     **PowerShell** to create the guest vm to protect.  
 
 
@@ -60,7 +59,7 @@ Select **Virtual machines** and, on the **Virtual machines** blade,
 
     ```
     
-4.  Sign in again to that VM to follow the steps down below
+1.  Sign in again to that VM to follow the steps on the next Exercise
 
 ### EXERCISE 2 Set Up Jenkins
 >
