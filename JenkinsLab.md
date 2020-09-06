@@ -69,7 +69,7 @@ chmod +x ContainerVm.bash
 
 1.  [Create My Shuttle Project for this Lab](https://azuredevopsdemogenerator.azurewebsites.net/?Name=MyShuttle)
 
-### EXERCISE 2 Set Up Jenkins
+### EXERCISE 2: Set Up Jenkins
 >
 #### Task 1: -- Download and Start Jenkins
 
@@ -346,4 +346,11 @@ c.  Password, Jenkins password
 13. Can you fix the error, to see the builds on Jenkins?
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/31-Output.png)
+
+
+### EXERCISE 3: Remove the resources created for this Lab
+>
+#### Task 1: Delete the resource group
+
+1.  On the Remote Computer session navigate to Resource Groups and delete the Jenkins Resource Group
 
