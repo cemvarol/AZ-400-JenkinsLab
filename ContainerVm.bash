@@ -18,7 +18,7 @@ VMSize3=standard_DS3_v2
 Pip=$(echo "$VM"Pip)
 AP="10.206.0.0/16"
 SN01="10.206.1.0/24"
-user=cem
+user=QA
 pass=1q2w3e4r5t6y*
 
 az group create -n $RG -l $L
