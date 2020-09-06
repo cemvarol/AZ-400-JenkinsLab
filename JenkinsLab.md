@@ -1,4 +1,4 @@
-> #### EXERCISE 1 Create the VM for Containers
+### EXERCISE 1 Create the VM for Containers
 
 1.  Create a vm that supports containers. Please run [this script](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/ContainerVM) on **Bash** command of azure.![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
 
