@@ -1,3 +1,7 @@
+
+# Lab: Azure DevOps Jenkins Lab Running on Containers
+
+
 ### EXERCISE 1 Create the VM for Containers
 
 1.  Create a vm that supports containers. Please run [this script](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/ContainerVM) on **Bash** command of azure.![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
@@ -6,9 +10,9 @@
     
 4.  Sign in again to that VM to follow the steps down below
 
-> #### EXERCISE 2 Set Up Jenkins
+### EXERCISE 2 Set Up Jenkins
 >
-> **Task 1 -- Download and Start Jenkins**
+#### Task 1 -- Download and Start Jenkins
 
 1.  Run this command below on the command prompt to download the Jenkins image
 
@@ -67,7 +71,7 @@
 
 14. Click **Start using Jenkins**
 
-> **Task 2 -- Installing and Configuring Plugins**
+#### Task 2 -- Installing and Configuring Plugins
 
 1.  We will now install the Maven and VSTS plugins that are needed for this lab.
     
@@ -97,7 +101,7 @@
 
 7.  Navigate **Back to the Dashboard** 
 
-> **Task 3 -- Creating a new build job in Jenkins**
+#### Task 3 -- Creating a new build job in Jenkins
 
 1.  Click on the **New Item** link. Provide a name for the build definition, select **Maven project** and click **OK**. (Type
     something to distinguish the names with Jenkins e.g **MS-Jen)**
@@ -151,9 +155,9 @@
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/19-Build-No1.png)
 
-**EXERCISE 3 Trigger Jenkins build from Azure Devops**
+### EXERCISE 3 Trigger Jenkins build from Azure Devops
 
-> **Task 1 -- Approach 1: Creating a service hook in Azure DevOps**
+#### Task 1 -- Approach 1: Creating a service hook in Azure DevOps**
 
 1.  Navigate to the Azure DevOps project settings page and select **Service hooks** under **General**. Select **+ Create
     subscription**
@@ -211,7 +215,7 @@ d.  Record this value, you will use this value as your **Jenkins Base URL**
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/24-BuildHist.png)
 
 
->#### Task 2 -- Approach 2: Wrapping Jenkins Job within Azure Pipelines
+#### Task 2 -- Approach 2: Wrapping Jenkins Job within Azure Pipelines
 
 1.  Go to your project settings. Under **Pipelines** click **Service connections** and create **New service connection** for **Jenkins** click **Next**
     
