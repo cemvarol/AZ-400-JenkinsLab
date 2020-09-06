@@ -30,8 +30,8 @@ Select **Virtual machines** and, on the **Virtual machines** blade,
 
 1.  When prompted, sign in with the following credentials:
 
--   User Name: **QA**
--   Password: **1q2w3e4r5t6y\***
+    -   User Name: **QA**
+    -   Password: **1q2w3e4r5t6y\***
 
     > **Important Note:** All the actions you will follow including this step
     will be done on this Remote Computer's Console.
