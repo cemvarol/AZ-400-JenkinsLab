@@ -1,3 +1,13 @@
+Set-NetFirewallProfile -Enabled False
+
+Set-Service W32Time -StartupType Automatic
+w32tm /config /syncfromflags:manual /manualpeerlist:"time.windows.com"
+w32tm /config /reliable:yes
+net start w32time
+
+Set-TimeZone "GMT Standard Time"
+
+
 
 $url = "https://github.com/cemvarol/AZ-Migration/blob/master/ChromeSetup.exe?raw=true"
 $output = "$env:USERPROFILE\downloads\ChromeSetup.exe"
