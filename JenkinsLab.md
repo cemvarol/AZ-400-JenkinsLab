@@ -1,0 +1,282 @@
+> #### EXERCISE 1 Create the VM for Containers
+
+1.  Create a vm that supports containers. Please run [this script](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/ContainerVM) on **Bash** command of azure.![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
+
+3.  After the VM is created, connect to the VM via RDP, and use run [this script](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/1-DockerDT.ps1)on VM's powershell console This will install docker Desktop to that VM, *please restart when prompted*.
+    
+4.  Sign in again to that VM to follow the steps down below
+
+> #### EXERCISE 2 Set Up Jenkins
+>
+> **Task 1 -- Download and Start Jenkins**
+
+1.  Run this command below on the command prompt to download the Jenkins image
+
+**Docker pull Jenkins/Jenkins:latest**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.1-DLJenkins.png)
+
+
+2.  After download completed, we are ready to start the Jenkins image.
+
+3.  Run the command below to start Jenkins from port 8888
+
+**docker run -d -p 8888:8080 \--name Jens jenkins/jenkins**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.2-DLJenkins.png)
+
+
+4.  Time to visit the Jenkins page, leave command prompt open.
+
+5.  Open a browser window and visit <http://localhost:8888/> address
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/03-UnlockJenkins.png)
+
+
+6.  We need the activate with administrator password
+
+7.  Go back to command prompt and run the command below to access the Linux console
+
+**docker exec -it Jens bash**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/04-ExecJenkins.png)
+
+
+8.  We are now on Jenkins Linux bash console
+
+9.  Run the command below to display administrator password for initial configuration
+
+**\"/var/jenkins_home/secrets/initialAdminPassword\"**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/05-InitialAdminPass.png)
+
+
+10. Get the Key and paste onto Jenkins screen to start initial setup of Jenkins
+    
+11. Choose **Install** **Suggested Plugins**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/06-CustomizeJenkins.png)
+
+
+12. After the installation, create your user account on Jenkins, save and continue
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/07-FirstAdmin.png)
+
+
+13. Confirm the step and click continue
+
+14. Click **Start using Jenkins**
+
+> **Task 2 -- Installing and Configuring Plugins**
+
+1.  We will now install the Maven and VSTS plugins that are needed for this lab.
+    
+2.  Click **Manage Jenkins** on the Jenkins home page and select **Manage Plugins**. Select the **Available** tab and search
+    for team services
+    
+    
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/08-ManageJenkins.png)
+
+3.  Search for **VS Team Services Continuous Deployment** plugin and click **Install without restart**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/09-VSTeamSrv.png)
+
+
+4.  Search for **Maven Integration Plugin** and **Install without restart**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/10-Maven.png)
+
+
+5.  Once the plugin is installed, go back to **Manage Jenkins** and select the **Global Tool Configuration** option.
+    
+6.  Under **Global Tool Configuration**, Maven, choose the version 3.6.3, provide a name and **Save**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/11-MavenVer.png)
+
+
+7.  Navigate **Back to the Dashboard** 
+
+> **Task 3 -- Creating a new build job in Jenkins**
+
+1.  Click on the **New Item** link. Provide a name for the build definition, select **Maven project** and click **OK**. (Type
+    something to distinguish the names with Jenkins e.g **MS-Jen)**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/12-EnterItemName.png)
+
+
+2.  Under **Source Code Management**, choose **Git**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/13-SourceCodeMan.png)
+
+
+3.  Jenkins needs access to the repository to build your project.
+
+4.  On a different tab; Navigate to Repository under your **My Shuttle Project**
+    
+5.  Click clone repository and **Generate Git Credentials**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/14-CloneRepo.png)
+
+
+6.  Go back to Jenkins tab and fill in the URL field and add the credentials
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/15-AddCreds.png)
+
+
+7.  On the new window, fill in the user and the password field with the credentials from your repo
+    
+8.  Choose the newly created credentials to complete authentication
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/16-CompleteAuth.png)
+
+
+9.  Scroll down to the **Build** section and provide the text package -Dtest=FaresTest,SimpleTest in the **Goals and
+    options** field.
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/17-Build.png)
+
+10. Scroll down to the **Post-build Actions** and choose the **Archive the artifacts** option.
+    
+11. Enter **target/\*.war, \*.sql** in the **Files to archive** text box.
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/18-PostBuild.png)
+
+
+12. Select the **Save** button to save the settings and return to the project page
+    
+13. The configuration is completed, Select the **Build Now** on the menu left.  
+    
+14. Observe the results.
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/19-Build-No1.png)
+
+**EXERCISE 3 Trigger Jenkins build from Azure Devops**
+
+> **Task 1 -- Approach 1: Creating a service hook in Azure DevOps**
+
+1.  Navigate to the Azure DevOps project settings page and select **Service hooks** under **General**. Select **+ Create
+    subscription**
+    
+2.  Choose **Jenkins** from the list and click **Next**
+
+3.  Choose MyShuttle for repository and leave the value as Any for other fields and click **Next**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/20-Filters.png)
+
+
+
+4.  You will need you public-Ip address to provide [click here](https://www.google.com/search?q=what+is+my+ip&oq=what&aqs=chrome.0.69i59j69i57j0l3j69i61l3.1566j0j1&sourceid=chrome&ie=UTF-8) to get your public Ip address.
+    
+    a.  Or visit what is my ip on the vm which holds Jenkins container to get the Ip address
+
+    b.  add :8888 to the end of the ip address
+    
+c.  It will be like <http://YourPublicIp:8888>
+    
+d.  Record this value, you will use this value as your **Jenkins Base URL**
+    
+5.  Go to Jenkins tab and click your user name on top right corner.
+
+6.  Click **Configure** on the left pane.
+
+7.  Create a new API Token, click **Add new Token**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/21-ApiToken.png)
+
+
+8.  Type something to identify the token and click **Generate**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/22-GenToken.png)
+
+
+9.  Copy the token and get back to **New Service Hooks Subscription** tab on Azure DevOps
+    
+10. Provide the values as address with 8888, username of Jenkins, and the token
+    
+11.  Choose the build available on Jenkins and click **Test** if everything is fine, click **Finish**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/23-Test-Finish.png)
+
+
+12. Now we set up a connection to Jenkins from Azure Devops. Any change on the code should trigger a new build on Jenkins.
+    
+13. Try making a commit to the code - src/main/webapp/index.jsp would be a good candidate. This should trigger the build on Jenkins. You can confirm it by checking the history tab of the Jenkins services hook.
+    
+14. Go to Jenkins page and navigate to MS-Jen and check your builds.
+
+15. 3 builds are listed. First one was the initial build, second is triggered when hook was created, third one is created after the
+    step 13.
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/24-BuildHist.png)
+
+
+>#### Task 2 -- Approach 2: Wrapping Jenkins Job within Azure Pipelines
+
+1.  Go to your project settings. Under **Pipelines** click **Service connections** and create **New service connection** for **Jenkins** click **Next**
+    
+2.  Provide the values as address with 8888, username of Jenkins, and the token
+    
+a.  **Server URL** public ip with :8888 appended
+    
+b.  Username, Jenkins image user account
+    
+c.  Password, Jenkins password
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/25-JenkinsSrvConn.png)
+
+
+3.  Go to **Pipelines** and create a **New Pipeline** 
+
+4.  Select Use the classic editor to create a pipeline.
+
+5.  Select **Myshuttle** project, repository and click *Continue*.
+
+6.  Search for **Jenkins** template and then click on **Apply**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/26-QueueJenkins.png)
+
+
+
+7.  Provide the necessary information for the pipeline
+
+    a.  Name is filled in Automatically.
+
+    b.  Choose **vs2017-win2016** for Agent Pool
+
+    c.  Provide a Job Name, use the same name on Jenkins, mine was  **MS-Jen**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/27-JenkinsCI.png)
+
+
+
+8.  Select the **Get Sources** step. Since Jenkins is being used for the build, no need to download the source code to the build agent. To skip syncing with the agent, select **Don't sync sources** option
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/28-DontSync.png)
+
+
+
+9.  Next, select the **Queue Jenkins Job** step. This task queues the job on the Jenkins server. Make sure that the services endpoint and the job names are correct. The **Capture console output** and the **Capture pipeline output** options available at this step will be selected.
+    
+    a.  The **Capture console output and wait for completion** option, when selected, will capture the output of the Jenkins build console when the Azure build pipeline runs. The build will wait  until the Jenkins Job is completed.
+    
+    b.  The **Capture pipeline output and wait for pipeline completion** option is very similar but applies to Jenkins
+    pipelines (a build that has more than one job nested together).
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/29-Capture.png)
+
+
+
+10. The **Jenkins Download Artifacts** task will download the build artifacts from the Jenkins job to the staging directory
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/30-SaveTo.png)
+
+
+11. The **Publish Artifact drop** will publish to Azure Pipelines.
+
+12. Click on Save & queue button to save. Provide the Save Comment and Run.
+    
+13. Can you fix the error, to see the builds on Jenkins?
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/31-Output.png)
+
