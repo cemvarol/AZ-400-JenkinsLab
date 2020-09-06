@@ -63,6 +63,8 @@ chmod +x ContainerVm.bash
 
 9.  You will be using this remote console on the rest of the exercises of this lab
 
+10. Wait for the services start, ignore prompt for update, click **Skip This BUild**
+
 
 ### EXERCISE 2 Set Up Jenkins
 >
