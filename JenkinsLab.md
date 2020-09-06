@@ -21,7 +21,7 @@ chmod +x ContainerVm.bash
 
 #### Task 1: Set up VM To provide Containers Service
 
-Select **Virtual machines** and, on the **Virtual machines** blade,
+1.  Select **Virtual machines** and, on the **Virtual machines** blade,
     select **ContainersVM**.
 
 1.  Select **Networking**.
@@ -37,11 +37,13 @@ Select **Virtual machines** and, on the **Virtual machines** blade,
 
    > **Important Note:** All the actions you will follow including this step will be done on this Remote Computer's Console.
 
-4.  Within the Remote Desktop session run the following command in
-    **PowerShell** to create the guest vm to protect.  
+4.  Within the Remote Desktop session run the following command in **PowerShell** to create the guest vm to protect.  
 
+5.  The installer will ask for your confirmation, click **OK** to complete the installation.  
 
-    >**Note:** This will install docker Desktop to that VM, *please restart when prompted*.
+    >**Note:** This will install docker Desktop to that VM, installation will take 3-4 minutes
+    
+6.  Click **Close and Restart** *when prompted*.
     
     
     ```powershell
@@ -57,7 +59,10 @@ Select **Virtual machines** and, on the **Virtual machines** blade,
 
     ```
     
-5.  Sign in again to that VM to follow the steps on the next Exercise
+7.  Sign in again to that VM to follow the steps 1-4 on this task
+
+8.  You will be using this remote console on the rest of the exercises of this lab
+
 
 ### EXERCISE 2 Set Up Jenkins
 >
