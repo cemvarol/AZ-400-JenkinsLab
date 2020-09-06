@@ -83,58 +83,58 @@ chmod +x ContainerVm.bash
 
 **docker images**
 
-3.  Run the command below to present the running images, this will return an empty list.
+4.  Run the command below to present the running images, this will return an empty list.
 
 **docker ps**
 
-3.  Run the command below to start Jenkins from port 8888
+5.  Run the command below to start Jenkins from port 8888
 
 **docker run -d -p 8888:8080 \--name Jens jenkins/jenkins:latest**
 
-3.  Run the command below to present the running images, this list the image you started on previous step.
+6.  Run the command below to present the running images, this list the image you started on previous step.
 
 **docker ps**
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.02-DLJenkins.png)
 
-4.  Time to visit the Jenkins page, leave command prompt open.
+7.  Time to visit the Jenkins page, leave command prompt open.
 
-5.  Open a chrome browser window and visit <http://localhost:8888/> address, better to set as default. 
+8.  Open a chrome browser window and visit <http://localhost:8888/> address, better to set as default. 
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/03-UnlockJenkins.png)
 
-6.  We need the activate with administrator password
+9.  We need the activate with administrator password
 
-7.  Go back to command prompt and run the command below to access the Linux console
+10.  Go back to command prompt and run the command below to access the Linux console
 
 **docker exec -it Jens bash**
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/04-ExecJenkins.png)
 
 
-8.  We are now on Jenkins Linux bash console
+11.  We are now on Jenkins Linux bash console
 
-9.  Run the command below to display administrator password for initial configuration
+12.  Run the command below to display administrator password for initial configuration
 
 **cat var/jenkins_home/secrets/initialAdminPassword**
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/05-InitialAdminPass.png)
 
-10. Copy the Key and paste onto **Unlock Jenkins** screen inside **Adninistrator Password** field and click **Continue** to start initial setup of Jenkins
+13. Copy the Key and paste onto **Unlock Jenkins** screen inside **Adninistrator Password** field and click **Continue** to start initial setup of Jenkins
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.03-UnlockJenkins.png)
     
-11. Choose **Install** **Suggested Plugins**
+14. Choose **Install** **Suggested Plugins**
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/06-CustomizeJenkins.png)
 
-
-12. After the installation, create your user account on Jenkins, save and continue
+15. After the installation, create your user account on Jenkins, save and continue
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/07-FirstAdmin.png)
 
+16. Confirm the step and click continue
 
-13. Confirm the step and click continue
-
-14. Click **Start using Jenkins**
+17. Click **Start using Jenkins**
 
 #### Task 2: -- Installing and Configuring Plugins
 
