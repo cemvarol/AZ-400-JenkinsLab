@@ -120,8 +120,7 @@ chmod +x ContainerVm.bash
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/05-InitialAdminPass.png)
 
-
-10. Get the Key and paste onto Jenkins screen to start initial setup of Jenkins
+10. Copy the Key and paste onto **Unlock Jenkins** screen inside **Adninistrator Password** field and click **Continue** to start initial setup of Jenkins
     
 11. Choose **Install** **Suggested Plugins**
 
