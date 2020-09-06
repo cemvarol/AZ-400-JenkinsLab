@@ -59,7 +59,7 @@ chmod +x ContainerVm.bash
 
     ```
     
-8.  Sign in again to that VM to follow the steps 1-4 on this task
+8.  Sign in again to that VM, follow the steps 1-4 on this task.
 
 9.  You will be using this remote console on the rest of the exercises of this lab
 
