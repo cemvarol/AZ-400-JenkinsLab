@@ -22,7 +22,7 @@ chmod +x ContainerVm.bash
 #### Task 2: Set up VM To provide Containers Service
 
 1.  Select **Virtual machines** and, on the **Virtual machines** blade,
-    select **ContainersVM**.
+    select **Jen-VM**.
 
 1.  Select **Networking**.
 
