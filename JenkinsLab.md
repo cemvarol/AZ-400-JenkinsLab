@@ -4,7 +4,7 @@
 
 ### EXERCISE 1: Prepare the Environment
 
-#### Task 1: Create the VM for Containers
+#### Task 1: Create the VM
 
 1.  Create a vm that supports containers. Please run command below on  **Bash** command of azure.
 
