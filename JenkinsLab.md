@@ -203,8 +203,7 @@ chmod +x ContainerVm.bash
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/16-CompleteAuth.png)
 
-9.  Scroll down to the **Build** section and provide the text package -Dtest=FaresTest,SimpleTest in the **Goals and
-    options** field.
+9.  Scroll down to the **Build** section and provide the text **package -Dtest=FaresTest,SimpleTest** in the **Goals and options** field.
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/17-Build.png)
 
