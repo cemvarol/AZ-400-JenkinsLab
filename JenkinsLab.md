@@ -72,7 +72,7 @@ chmod +x ContainerVm.bash
 
 1.  Run this command below on the command prompt to download the Jenkins image
 
-**Docker pull Jenkins/Jenkins:latest**
+**docker pull jenkins/jenkins:latest**
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.1-DLJenkins.png)
 
