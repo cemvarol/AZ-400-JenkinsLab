@@ -65,6 +65,9 @@ chmod +x ContainerVm.bash
 
 10. Wait for the services start, ignore prompt for update, click **Skip This BUild**
 
+#### Task 3: -- Create Azure Project
+
+1.  [Create My Shuttle Project for this Lab](https://azuredevopsdemogenerator.azurewebsites.net/?Name=MyShuttle)
 
 ### EXERCISE 2 Set Up Jenkins
 >
