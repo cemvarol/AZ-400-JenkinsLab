@@ -37,13 +37,13 @@ chmod +x ContainerVm.bash
 
    > **Important Note:** All the actions you will follow including this step will be done on this Remote Computer's Console.
 
-4.  Within the Remote Desktop session run the following command in **PowerShell** to create the guest vm to protect.  
+5.  Within the Remote Desktop session run the following command in **PowerShell** to create the guest vm to protect.  
 
-5.  The installer will ask for your confirmation, click **OK** to complete the installation.  
+6.  The installer will ask for your confirmation, click **OK** to complete the installation.  
 
     >**Note:** This will install docker Desktop to that VM, installation will take 3-4 minutes
     
-6.  Click **Close and Restart** *when prompted*.
+7.  Click **Close and Restart** *when prompted*.
     
     
     ```powershell
@@ -59,9 +59,9 @@ chmod +x ContainerVm.bash
 
     ```
     
-7.  Sign in again to that VM to follow the steps 1-4 on this task
+8.  Sign in again to that VM to follow the steps 1-4 on this task
 
-8.  You will be using this remote console on the rest of the exercises of this lab
+9.  You will be using this remote console on the rest of the exercises of this lab
 
 
 ### EXERCISE 2 Set Up Jenkins
