@@ -1,4 +1,3 @@
-Set-NetFirewallProfile -Enabled False
 
 cd\
 mkdir SC
