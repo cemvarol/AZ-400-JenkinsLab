@@ -19,7 +19,7 @@ chmod +x ContainerVm.bash
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
 
 
-#### Task 1: Set up VM To provide Containers Service
+#### Task 2: Set up VM To provide Containers Service
 
 1.  Select **Virtual machines** and, on the **Virtual machines** blade,
     select **ContainersVM**.
