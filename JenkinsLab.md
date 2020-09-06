@@ -14,6 +14,7 @@ curl -O https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/Cont
 ls -la ContainerVm.bash
 chmod +x ContainerVm.bash
 ./ContainerVm.bash
+#
 ```
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
 
@@ -52,6 +53,7 @@ Select **Virtual machines** and, on the **Virtual machines** blade,
     Invoke-WebRequest -Uri $url -OutFile $output
     Start-Sleep -s 5
     Start-Process Powershell.exe -Argumentlist "-file C:\SC\DockerDL.ps1"
+    #
 
     ```
     
