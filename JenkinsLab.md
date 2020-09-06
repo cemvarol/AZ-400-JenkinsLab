@@ -36,7 +36,7 @@ Select **Virtual machines** and, on the **Virtual machines** blade,
 
    > **Important Note:** All the actions you will follow including this step will be done on this Remote Computer's Console.
 
-1.  Within the Remote Desktop session run the following command in
+4.  Within the Remote Desktop session run the following command in
     **PowerShell** to create the guest vm to protect.  
 
 
@@ -59,7 +59,7 @@ Select **Virtual machines** and, on the **Virtual machines** blade,
 
     ```
     
-1.  Sign in again to that VM to follow the steps on the next Exercise
+5.  Sign in again to that VM to follow the steps on the next Exercise
 
 ### EXERCISE 2 Set Up Jenkins
 >
