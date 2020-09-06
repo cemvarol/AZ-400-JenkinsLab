@@ -343,7 +343,7 @@ c.  Password, Jenkins password
 
 12. Click on Save & queue button to save. Provide the Save Comment and Run.
     
-13. Queue part may take long to appear as completed on Azure DevOps page, check the Jenkins you will see the new build there.
+13. Queue part may take long to appear as completed on Azure DevOps page, check the [Jenkins Project MS-Jen](http://localhost:8888/job/MS-Jen/) you will see the new build there.
 
 13. Your number of builds may/may-not vary, depending on document creating process)
 
