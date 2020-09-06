@@ -166,14 +166,15 @@
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/20-Filters.png)
 
 
-
 4.  You will need you public-Ip address to provide [click here](https://www.google.com/search?q=what+is+my+ip&oq=what&aqs=chrome.0.69i59j69i57j0l3j69i61l3.1566j0j1&sourceid=chrome&ie=UTF-8) to get your public Ip address.
     
     a.  Or visit what is my ip on the vm which holds Jenkins container to get the Ip address
 
     b.  add :8888 to the end of the ip address
     
-c.  It will be like <http://YourPublicIp:8888>
+    >**Note:** As mentioned on section a above, please keep using the remote computer. 
+    
+c.  It will be like <http://YourRemoteServerPublicIp:8888>
     
 d.  Record this value, you will use this value as your **Jenkins Base URL**
     
@@ -189,7 +190,6 @@ d.  Record this value, you will use this value as your **Jenkins Base URL**
 8.  Type something to identify the token and click **Generate**
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/22-GenToken.png)
-
 
 9.  Copy the token and get back to **New Service Hooks Subscription** tab on Azure DevOps
     
