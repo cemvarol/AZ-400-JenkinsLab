@@ -353,5 +353,7 @@ c.  Password, Jenkins password
 >
 #### Task 1: Delete the resource group
 
-1.  On the Remote Computer session navigate to Resource Groups and delete the Jenkins Resource Group
+1.  On the Remote Computer session, navigate to [Azure Portal](https://portal.azure.com), click **Resource Groups** and delete the **Jenkins** Resource Group
+
+>**Important Note:** This will disconnect the session and delete the remote computer that you are connected.
 
