@@ -230,9 +230,9 @@ chmod +x ContainerVm.bash
     
 2.  Choose **Jenkins** from the list and click **Next**
 
-3.  Choose MyShuttle for repository and leave the value as Any for other fields and click **Next**
+3.  Choose **Code Pushed** for event type and, **MyShuttle** for repository and leave the value as Any for other fields and click **Next**
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/20-Filters.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/20.01-Filters.png)
 
 
 4.  You will need you public-Ip address to provide [click here](https://www.google.com/search?q=what+is+my+ip&oq=what&aqs=chrome.0.69i59j69i57j0l3j69i61l3.1566j0j1&sourceid=chrome&ie=UTF-8) to get your public Ip address.
@@ -349,7 +349,7 @@ c.  Password, Jenkins password
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/31-Output.png)
 
 
-### EXERCISE 3: Remove the resources created for this Lab
+### EXERCISE 4: Remove the resources created for this Lab
 >
 #### Task 1: Delete the resource group
 
