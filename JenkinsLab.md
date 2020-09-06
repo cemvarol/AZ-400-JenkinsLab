@@ -313,7 +313,7 @@ c.  Password, Jenkins password
 
     b.  Choose **vs2017-win2016** for Agent Pool
 
-    c.  Provide a Job Name, use the same name on Jenkins, mine was  **MS-Jen**
+    c.  Provide a Job Name, **use the SAME ITEM NAME on Jenkins**, mine was  **MS-Jen**
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/27-JenkinsCI.png)
 
