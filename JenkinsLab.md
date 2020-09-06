@@ -275,9 +275,9 @@ d.  Record this value, you will use this value as your **Jenkins Base URL**
     
 14. Go to Jenkins page and navigate to **MS-Jen** and check your builds.
 
-15. Builds are listed. (Your number of builds may vary, depending document creating process)
+15. Builds are listed. (Your number of builds may/may-not vary, depending document creating process)
     
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/24-BuildHist.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/24.01-BuildHist.png)
 
 
 #### Task 2: -- Approach 2: Wrapping Jenkins Job within Azure Pipelines
@@ -345,9 +345,9 @@ c.  Password, Jenkins password
     
 13. Queue part may take long to appear as completed on Azure DevOps page, check the Jenkins you will see the new build there.
 
-13. Your number of builds may vary, depending on document creating process)
+13. Your number of builds may/may-not vary, depending on document creating process)
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/31-Output.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/31.01-Output.png)
 
 
 ### EXERCISE 4: Remove the resources created for this Lab
