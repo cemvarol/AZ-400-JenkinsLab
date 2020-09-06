@@ -21,7 +21,7 @@ chmod +x ContainerVm.bash
 #### Task 1: Set up VM To provide Containers Service
 
 Select **Virtual machines** and, on the **Virtual machines** blade,
-    select **Containers**.
+    select **ContainersVM**.
 
 1.  Select **Networking**.
 
