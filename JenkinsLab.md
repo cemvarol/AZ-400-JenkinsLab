@@ -88,7 +88,7 @@ chmod +x ContainerVm.bash
 
 4.  Time to visit the Jenkins page, leave command prompt open.
 
-5.  Open a browser window and visit <http://localhost:8888/> address
+5.  Open a chrome browser window and visit <http://localhost:8888/> address, better to set as default. 
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/03-UnlockJenkins.png)
 
