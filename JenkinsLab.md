@@ -78,8 +78,7 @@
 2.  Click **Manage Jenkins** on the Jenkins home page and select **Manage Plugins**. Select the **Available** tab and search
     for team services
     
-    
-
+  
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/08-ManageJenkins.png)
 
 3.  Search for **VS Team Services Continuous Deployment** plugin and click **Install without restart**
@@ -134,7 +133,6 @@
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/16-CompleteAuth.png)
 
-
 9.  Scroll down to the **Build** section and provide the text package -Dtest=FaresTest,SimpleTest in the **Goals and
     options** field.
 
@@ -146,7 +144,6 @@
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/18-PostBuild.png)
 
-
 12. Select the **Save** button to save the settings and return to the project page
     
 13. The configuration is completed, Select the **Build Now** on the menu left.  
@@ -157,7 +154,7 @@
 
 ### EXERCISE 3 Trigger Jenkins build from Azure Devops
 
-#### Task 1 -- Approach 1: Creating a service hook in Azure DevOps**
+#### Task 1 -- Approach 1: Creating a service hook in Azure DevOps
 
 1.  Navigate to the Azure DevOps project settings page and select **Service hooks** under **General**. Select **+ Create
     subscription**
@@ -253,11 +250,9 @@ c.  Password, Jenkins password
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/27-JenkinsCI.png)
 
 
-
 8.  Select the **Get Sources** step. Since Jenkins is being used for the build, no need to download the source code to the build agent. To skip syncing with the agent, select **Don't sync sources** option
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/28-DontSync.png)
-
 
 
 9.  Next, select the **Queue Jenkins Job** step. This task queues the job on the Jenkins server. Make sure that the services endpoint and the job names are correct. The **Capture console output** and the **Capture pipeline output** options available at this step will be selected.
