@@ -69,6 +69,8 @@ chmod +x ContainerVm.bash
 
 1.  [Create My Shuttle Project for this Lab](https://azuredevopsdemogenerator.azurewebsites.net/?Name=MyShuttle)
 
+>**Important Note:** You may have already done Task 3 if you are following the course excel file. 
+
 ### EXERCISE 2: Set Up Jenkins
 >
 #### Task 1: -- Download and Start Jenkins
