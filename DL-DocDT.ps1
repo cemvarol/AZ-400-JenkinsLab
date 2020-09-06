@@ -7,9 +7,9 @@ Invoke-WebRequest -Uri $url -OutFile $output
 
 Start-Sleep -s 40
 
-#& "C:\Program Files (x86)\google\chrome\Application\chrome.exe" https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe
+#& "C:\Program Files\google\chrome\Application\chrome.exe" https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe
 
-& "C:\Program Files (x86)\google\chrome\Application\chrome.exe" https://download.docker.com/win/stable/43884/Docker%20Desktop%20Installer.exe
+& "C:\Program Files\google\chrome\Application\chrome.exe" https://download.docker.com/win/stable/43884/Docker%20Desktop%20Installer.exe
 
 
 
