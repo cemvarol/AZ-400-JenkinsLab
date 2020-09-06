@@ -4,7 +4,17 @@
 
 ### EXERCISE 1 Create the VM for Containers
 
-1.  Create a vm that supports containers. Please run [this script](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/ContainerVM) on **Bash** command of azure.![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
+1.  Create a vm that supports containers. Please run command below on  **Bash** command of azure.
+
+
+```sh
+curl -O https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/ContainerVm.bash
+ls -la ContainerVm.bash
+chmod +x ContainerVm.bash
+./ContainerVm.bash
+```
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
 
 3.  After the VM is created, connect to the VM via RDP, and use run [this script](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/1-DockerDT.ps1)on VM's powershell console This will install docker Desktop to that VM, *please restart when prompted*.
     
