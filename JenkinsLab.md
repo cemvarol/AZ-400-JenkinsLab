@@ -103,7 +103,6 @@ chmod +x ContainerVm.bash
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/03-UnlockJenkins.png)
 
-
 6.  We need the activate with administrator password
 
 7.  Go back to command prompt and run the command below to access the Linux console
@@ -117,7 +116,7 @@ chmod +x ContainerVm.bash
 
 9.  Run the command below to display administrator password for initial configuration
 
-**\"/var/jenkins_home/secrets/initialAdminPassword\"**
+**cat var/jenkins_home/secrets/initialAdminPassword**
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/05-InitialAdminPass.png)
 
