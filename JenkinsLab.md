@@ -74,17 +74,28 @@ chmod +x ContainerVm.bash
 
 **docker pull jenkins/jenkins:latest**
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.1-DLJenkins.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.01-DLJenkins.png)
 
 
 2.  After download completed, we are ready to start the Jenkins image.
+
+3.  Run the command below to list the downloaded images
+
+**docker images**
+
+3.  Run the command below to present the running images, this will return an empty list.
+
+**docker ps**
 
 3.  Run the command below to start Jenkins from port 8888
 
 **docker run -d -p 8888:8080 \--name Jens jenkins/jenkins:latest**
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.2-DLJenkins.png)
+3.  Run the command below to present the running images, this list the image you started on previous step.
 
+**docker ps**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/02.02-DLJenkins.png)
 
 4.  Time to visit the Jenkins page, leave command prompt open.
 
