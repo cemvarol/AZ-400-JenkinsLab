@@ -6,8 +6,11 @@
 
 #### Task 1: Create the VM
 
-1.  Create a vm that supports containers. Please run command below on  **Bash** command of azure.
+1.  On a new tab of your browser window, please navigate to [Azure Portal](https://portal.azure.com)
 
+2.  To create a vm that supports containers. Please run command below on  **Bash** command of azure.
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
 
 ```sh
 curl -O https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/ContainerVm.bash
@@ -16,8 +19,6 @@ chmod +x ContainerVm.bash
 ./ContainerVm.bash
 #
 ```
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
-
 
 #### Task 2: Set up VM To provide Containers Service
 
