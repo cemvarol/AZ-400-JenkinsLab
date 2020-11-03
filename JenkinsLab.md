@@ -40,13 +40,7 @@ chmod +x ContainerVm.bash
 
 5.  Within the Remote Desktop session run the following command in **PowerShell** to create the guest vm to protect.  
 
-6.  The installer will ask for your confirmation, click **OK** to complete the installation.  
 
-    >**Note:** This will install docker Desktop to that VM, installation will take 3-4 minutes
-    
-7.  Click **Close and Restart** *when prompted*.
-    
-    
     ```powershell
     Set-NetFirewallProfile -Enabled False
     cd\
@@ -59,7 +53,15 @@ chmod +x ContainerVm.bash
     #
 
     ```
+
+
+
+6.  The installer will ask for your confirmation, click **OK** to complete the installation.  
+
+    >**Note:** This will install docker Desktop to that VM, installation will take 3-4 minutes
     
+7.  Click **Close and Restart** *when prompted*.
+  
 8.  Sign in again to that VM again, follow the steps 1-4 on this task.
 
 9.  You will be using this remote console on the rest of the exercises of this lab
