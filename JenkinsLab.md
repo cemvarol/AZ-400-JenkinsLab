@@ -295,6 +295,8 @@ b.  Username, Jenkins image user account
     
 c.  Password, Jenkins password
 
+    >**Note:** Using password may not provide the access as expected, better to use Personal Access Tokens instead
+
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/25-JenkinsSrvConn.png)
 
 
