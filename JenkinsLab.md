@@ -316,7 +316,7 @@ c.  Password, Jenkins password
 
     a.  Name is filled in Automatically.
 
-    b.  Choose **vs2017-win2016** for Agent Pool
+    b.  Choose **Ubuntu-16.04** for Agent Pool
 
     c.  Provide a Job Name, **use the SAME ITEM NAME on Jenkins**, mine was  **MS-Jen**
 
