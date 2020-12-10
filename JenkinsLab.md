@@ -13,10 +13,10 @@
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/01-Bash.png)
 
 ```sh
-curl -O https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/ContainerVm.bash
-ls -la ContainerVm.bash
-chmod +x ContainerVm.bash
-./ContainerVm.bash
+curl -O https://raw.githubusercontent.com/cemvarol/AZ-400-JenkinsLab/master/JenVm.bash
+ls -la JenVm.bash
+chmod +x JenVm.bash
+./JenVm.bash
 #
 ```
 
